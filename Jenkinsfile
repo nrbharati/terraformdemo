@@ -2,7 +2,7 @@ node {
 
         stage('Demo Terraform') {
             sh '''
-                ${env.BUILD_ID}  ${env.JENKINS_URL}
+                date
           '''
 
         }
