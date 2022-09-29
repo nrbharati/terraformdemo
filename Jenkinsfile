@@ -8,6 +8,7 @@ node {
         }
         stage('Terraform init') {
             sh '''
+            rm -rf .terraform || true
             /usr/local/bin/terraform init
 
 
@@ -25,7 +26,7 @@ node {
 
         stage('Terraform apply'){
          sh '''
-            /usr/local/bin/terraform apply
+            /usr/local/bin/terraform apply -auto-approve
 
 
 
