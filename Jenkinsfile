@@ -2,7 +2,7 @@ node {
 
         stage('Demo Terraform') {
             sh '''
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                ${env.BUILD_ID}  ${env.JENKINS_URL}
           '''
 
         }
