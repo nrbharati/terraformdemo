@@ -1,10 +1,9 @@
-pipeline {
-    agent any
-    stages {
+node {
+
         stage('Demo Terraform') {
-            steps {
+            sh '''
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-            }
+          '''
 
         }
         stage('Terraform init') {
@@ -34,5 +33,5 @@ pipeline {
 
         }
 
-    }
+
 }
